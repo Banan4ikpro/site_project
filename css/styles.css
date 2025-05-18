@@ -1,0 +1,169 @@
+/* Унифицированная модель размеров */
+* {
+  box-sizing: border-box;
+}
+
+/* Основные стили страницы */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5); /* Холодный градиент */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Контейнер формы */
+.form-container {
+  background-color: white;
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Заголовок */
+h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Форма */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Метка */
+label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #555;
+  text-align: left;
+}
+
+/* Поле ввода */
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-bottom: 1.2rem;
+}
+
+/* Кнопка */
+input[type="submit"] {
+  padding: 10px 15px;
+  background-color: #7fbfff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #5aaeff;
+}
+
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #f44336; 
+  color: white;
+  padding: 12px 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  font-weight: bold;
+  z-index: 1000;
+
+  opacity: 0;
+  animation: fadeInOut 4s forwards;
+}
+
+/* Анимация появления и плавного исчезания */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  10%, 90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Контейнер для таблицы */
+.table-container {
+  background-color: white;
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 100%;
+  margin: 2rem auto;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Сама таблица */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+th {
+  background-color: #f0f4ff;
+  font-weight: 700;
+}
+
+/* Кнопка Вернуться */
+.btn-return {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    background-color: #74ebd5;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(116, 235, 213, 0.5);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn-return:hover {
+    background-color: #5bc5b6;
+    box-shadow: 0 8px 16px rgba(91, 197, 182, 0.7);
+}
